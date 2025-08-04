@@ -1,100 +1,105 @@
-body {
-    font-family: 'SF Pro Display', 'Segoe UI', Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(135deg, #f8fafc 0%, #e8eaed 100%);
-    color: #1a1a1a;
-    min-height: 100vh;
+/* Shared Section Styling */
+section {
+    margin-bottom: 40px;
 }
 
-header, footer {
-    background: rgba(30, 30, 30, 0.95);
-    color: #fff;
-    padding: 24px 0 16px 0;
-    text-align: center;
-    box-shadow: 0 2px 16px rgba(0,0,0,0.07);
-    letter-spacing: 0.03em;
+/* Dot Diagram Section */
+.dots-diagram {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 24px 0;
 }
 
-header h1 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin: 0 0 8px 0;
-    letter-spacing: -0.02em;
+.dot {
+    height: 16px;
+    width: 16px;
+    background-color: #00b4ff;
+    border-radius: 50%;
 }
 
-nav {
-    margin-top: 8px;
-}
-
-nav a {
-    margin: 0 18px;
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.1rem;
-    font-weight: 500;
-    padding: 8px 16px;
-    border-radius: 22px;
-    transition: background 0.2s, color 0.2s;
-    position: relative;
-}
-
-nav a:hover, nav a:focus {
-    background: rgba(255,255,255,0.12);
-    color: #00b4ff;
-    outline: none;
-}
-
-main {
-    max-width: 700px;
-    margin: 40px auto 32px auto;
-    padding: 32px 28px;
-    background: rgba(255,255,255,0.95);
-    border-radius: 24px;
-    box-shadow: 0 4px 32px rgba(0,0,0,0.08);
-    font-size: 1.15rem;
-    line-height: 1.7;
-}
-
-h2 {
-    font-size: 2rem;
+.dot-label {
     font-weight: 600;
-    margin-top: 0;
-    margin-bottom: 18px;
-    letter-spacing: -0.01em;
+    margin-right: 8px;
 }
 
-footer {
+/* Contact Form Styling */
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 6px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    resize: vertical;
     font-size: 1rem;
-    padding: 18px 0;
-    border-top: 1px solid #e0e0e0;
-    background: rgba(30, 30, 30, 0.98);
-    margin-top: 40px;
+    margin-bottom: 16px;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+    font-family: inherit;
 }
 
-@media (max-width: 800px) {
-    main {
-        max-width: 96vw;
-        padding: 18px 6vw;
-    }
-    header h1 {
-        font-size: 2rem;
-    }
-    h2 {
-        font-size: 1.3rem;
-    }
-    nav a {
-        font-size: 1rem;
-        margin: 0 8px;
-        padding: 7px 10px;
-    }
-}
-
-::-webkit-scrollbar {
-    width: 8px;
-    background: #e8eaed;
-}
-::-webkit-scrollbar-thumb {
-    background: #c1c1c1;
+button {
+    padding: 12px 20px;
+    background-color: #00b4ff;
+    color: white;
+    border: none;
     border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background-color: #008fcc;
+}
+
+/* Blog Post Cards */
+.blog-posts {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-top: 24px;
+}
+
+.post {
+    background-color: #f0f4f8;
+    padding: 20px;
+    border-left: 5px solid #00b4ff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.post h3 {
+    margin-top: 0;
+    color: #007BFF;
+}
+
+/* Services Boxes */
+.service-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-top: 30px;
+}
+
+.service-box {
+    padding: 20px;
+    background: #f9fbfd;
+    border-left: 5px solid #00b4ff;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.05);
+}
+
+.service-box h3 {
+    margin-top: 0;
+    color: #007BFF;
+}
+
+@media (min-width: 700px) {
+    .service-list {
+        grid-template-columns: 1fr 1fr;
+    }
 }
