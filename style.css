@@ -1,21 +1,100 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'SF Pro Display', 'Segoe UI', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: #f4f4f4;
+    background: linear-gradient(135deg, #f8fafc 0%, #e8eaed 100%);
+    color: #1a1a1a;
+    min-height: 100vh;
 }
+
 header, footer {
-    background: #333;
+    background: rgba(30, 30, 30, 0.95);
     color: #fff;
-    padding: 10px 20px;
+    padding: 24px 0 16px 0;
     text-align: center;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+    letter-spacing: 0.03em;
 }
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0 0 8px 0;
+    letter-spacing: -0.02em;
+}
+
+nav {
+    margin-top: 8px;
+}
+
 nav a {
-    margin: 0 15px;
-    color: white;
+    margin: 0 18px;
+    color: #fff;
     text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 22px;
+    transition: background 0.2s, color 0.2s;
+    position: relative;
 }
+
+nav a:hover, nav a:focus {
+    background: rgba(255,255,255,0.12);
+    color: #00b4ff;
+    outline: none;
+}
+
 main {
-    padding: 20px;
-    background: #fff;
+    max-width: 700px;
+    margin: 40px auto 32px auto;
+    padding: 32px 28px;
+    background: rgba(255,255,255,0.95);
+    border-radius: 24px;
+    box-shadow: 0 4px 32px rgba(0,0,0,0.08);
+    font-size: 1.15rem;
+    line-height: 1.7;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 18px;
+    letter-spacing: -0.01em;
+}
+
+footer {
+    font-size: 1rem;
+    padding: 18px 0;
+    border-top: 1px solid #e0e0e0;
+    background: rgba(30, 30, 30, 0.98);
+    margin-top: 40px;
+}
+
+@media (max-width: 800px) {
+    main {
+        max-width: 96vw;
+        padding: 18px 6vw;
+    }
+    header h1 {
+        font-size: 2rem;
+    }
+    h2 {
+        font-size: 1.3rem;
+    }
+    nav a {
+        font-size: 1rem;
+        margin: 0 8px;
+        padding: 7px 10px;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    background: #e8eaed;
+}
+::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 8px;
 }
